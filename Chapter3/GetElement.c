@@ -1,6 +1,7 @@
 
 #include "stdio.h"
 #include <stdlib.h>
+#include <string.h>
 #define OK 1
 #define ERROR 0
 #define TRUE 1
@@ -9,6 +10,11 @@
 typedef int Status;
 typedef int SqList ;
 typedef int ElemType; 
+
+typedef struct SqList{
+	ElemType data[MAXSIZE];
+	int length;
+}SqList;
 
  GetElem( SqList L, int i, ElemType *e)
 {

@@ -8,13 +8,18 @@
 typedef int ElemType;
 typedef int Status;
 
-
 typedef struct SqList{
 	ElemType *elem;
 	int length;
 	int listsize;
 }SqList;
 
+typedef struct Node
+{
+    ElemType data;
+    struct Node *next;
+}Node;
+typedef struct Node *LinkList; /* 定义LinkList */
 //初始化
  Status InitList(SqList &L)
 {
