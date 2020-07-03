@@ -1,15 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define ERROR -1
+#define OK 1
+#define MAXSIZE 20 
+
 //两栈共享空间结构
 typedef struct 
 {
-    SElemType data[MAXSIZE];
+    int data[MAXSIZE];
     int top1;
     int top2;
 }SqDoubleStack;
 
 //插入
-Status Push(SqDoubleStack *S, SElemType e, int stackNumber)
+int Push(SqDoubleStack *S, int e, int stackNumber)
 {
-    if(s->top1+1==s->top2)
+    if(S->top1+1==S->top2)
         return ERROR;
     if(stackNumber==1)
         S->data[++S->top1]=e;
@@ -19,7 +25,7 @@ Status Push(SqDoubleStack *S, SElemType e, int stackNumber)
 }
 
 //POP
-Status Pop(SqDoubleStack *S,SElemType *e,int stackNumber)
+int  Pop(SqDoubleStack *S,int *e,int stackNumber)
 {
     if (stackNumber==1)
     {

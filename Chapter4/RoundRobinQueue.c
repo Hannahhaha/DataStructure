@@ -1,3 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define ERROR -1
+#define OK 1
+#define MAXSIZE 20 
+
 typedef int QElemType;
 typedef struct 
 {
@@ -5,8 +11,7 @@ typedef struct
     int front;
     int rear;
 }SqQueue;
-
-Status InitQueue(SqQueue *Q)
+int InitQueue(SqQueue *Q)
 {
     Q->front=0;
     Q->rear=0;
@@ -18,7 +23,7 @@ int QueueLength(SqQueue Q)
     return (Q.rear-Q.front+MAXSIZE)%MAXSIZE;
 }
 
-Status EnQueue(SqQueue *Q,QElemType e)
+int EnQueue(SqQueue *Q,int e)
 {
     if((Q->rear+1) %MAXSIZE == Q->front)
         return ERROR;
@@ -28,7 +33,7 @@ Status EnQueue(SqQueue *Q,QElemType e)
     return OK;
 }
 
-Status DeQueue (SqQueue *Q,QElemType *e)
+int DeQueue (SqQueue *Q,int *e)
 {
     if(Q->front==Q->rear)
         return ERROR;

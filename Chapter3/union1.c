@@ -6,14 +6,17 @@
 #define ADD 10
 #define OVER -2
 typedef int ElemType;
+typedef int Status;
+
+
 typedef struct SqList{
 	ElemType *elem;
 	int length;
 	int listsize;
 }SqList;
+
 //初始化
-typedef int Status;
-Status InitList(SqList &L)
+ Status InitList(SqList &L)
 {
 	L.elem = (ElemType *)malloc(MAX * sizeof(ElemType));
 	if(!L.elem)
@@ -24,6 +27,7 @@ Status InitList(SqList &L)
 	L.listsize = MAX;
 	return OK;
  } 
+
  //添加
  Status InsertList(SqList &L,int i,ElemType e)
  {
@@ -63,6 +67,7 @@ Status InitList(SqList &L)
 	}
 	e = L.elem[i - 1];
    } 
+
    //比较函数
    Status LocateElem(SqList L,ElemType e)
    {
@@ -76,6 +81,7 @@ Status InitList(SqList &L)
 	   }
 	   return OK;
 	} 
+	
    //实现并集的函数
    void Union(SqList &La,SqList Lb) 
    {

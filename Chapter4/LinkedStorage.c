@@ -1,6 +1,14 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#define ERROR -1
+#define OK 1
+#define MAX 10
+
+#define MAXSIZE 20 
 typedef struct StackNode
 {
-    SElemType data;
+    int data;
     struct StackNode *next;
 }StackNode,*LinkStackPtr;
 
@@ -11,7 +19,7 @@ typedef struct LinkStack
 }LinkStack;
 
 //进栈
-Status Push (LinkStack *S, SElemType e)
+int Push (LinkStack *S, int e)
 {
     LinkStackPtr s=(LinkStackPtr)malloc(sizeof(StackNode));
     s->data=e;
@@ -22,7 +30,7 @@ Status Push (LinkStack *S, SElemType e)
 }
 
 //删除
-Status Pop(LinkStack *S, SElemType *e)
+int Pop(LinkStack *S, int *e)
 {
     LinkStackPtr p;
     if(StackEmpty(*S))

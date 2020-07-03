@@ -1,4 +1,5 @@
-
+#include "stdio.h"
+#include <stdlib.h>
 #define MAXSIZE 20 //存储空间初始分配量
 typedef int ElemType; 
 typedef int Status;
@@ -11,7 +12,7 @@ typedef struct
     int length; //线性表当前长度
 }SqList;
  
-Status ListDelete (SqList *L, int i, ElemType e)
+Status ListDelete (SqList *L, int i, ElemType *e)
  {
      int k;
      if (L->length==0)

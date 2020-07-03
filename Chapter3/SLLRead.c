@@ -1,3 +1,11 @@
+#include "stdio.h"
+#include <stdlib.h>
+typedef int ElemType; 
+typedef int Status;
+#define OK 1
+#define ERROR 0
+#define MAXSIZE 1000
+
 Status GetElem (LinkList L,int i,ElemType *e)
 {
   int j;

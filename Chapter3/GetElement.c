@@ -1,3 +1,6 @@
+
+#include "stdio.h"
+#include <stdlib.h>
 #define OK 1
 #define ERROR 0
 #define TRUE 1
@@ -7,7 +10,7 @@ typedef int Status;
 typedef int SqList ;
 typedef int ElemType; 
 
-Status GetElem( SqList L, int i, ElemType *e)
+ GetElem( SqList L, int i, ElemType *e)
 {
      if(L.length==0|| i<1 || i>L.length)
          return ERROR;

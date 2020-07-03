@@ -1,8 +1,15 @@
+ # include"stdio.h"
+#include <stdio.h>
+#include <stdlib.h>
+#define ERROR -1
+#define OK 1
+#define MAX 10
+
 typedef int QElemType;
 
 typedef struct QNode
 {
-    QElemType data;
+    int data;
     struct QNode *next;
 }QNode,*QueuePtr;
 
@@ -11,20 +18,20 @@ typedef struct
     QueuePtr front ,rear;
 }LinkQueue;
 
-Status EnQueue(LinkQueue *Q,QElemType e)
+int EnQueue(LinkQueue *Q,int e)
 {
     QueuePtr s=(QueuePtr)malloc(sizeof(QNode));
     if(!s)
-        exit(OVERFLOW);
+        exit(0);
     s->data=e;
     s->data=NULL;
-    Q->rear->nxet=s;
+    Q->rear->next=s;
 
     Q->rear=s;
     return OK;
 }
 
-Status DeQueue (LinkQueue *Q, QElemType *e)
+int DeQueue (LinkQueue *Q, int *e)
 {
     QueuePtr p;
     if(Q->front==Q->rear)

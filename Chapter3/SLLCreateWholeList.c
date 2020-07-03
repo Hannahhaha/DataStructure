@@ -1,4 +1,9 @@
- //随机产生n个元素的值，建立带表头结点的单链线性表L（头插法）
+ 
+ 
+#include "stdio.h"
+#include <stdlib.h>
+
+//随机产生n个元素的值，建立带表头结点的单链线性表L（头插法）
  void CreateListHead(LinkList *L ,int n)
  {
     LinkList p;
