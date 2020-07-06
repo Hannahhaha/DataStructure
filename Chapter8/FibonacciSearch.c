@@ -7,18 +7,12 @@ int Fibonacci_Search(int *a,int n,int key)
     low=1;
     high=n;
     k=0;
-    int Fib(k)
-    {
-      if (k <= 2)
-          return 1;
-      else
-         return Fib(k - 1) + Fib(k - 2);
-      while(n>Fib[k]-1)
-         k++;
-      for (int n;i<Fib[k]-1;i++)
-         a[i]=a[n];
-    }
 
+    while(n>Fib[k]-1)
+         k++;
+    for (int n;i<Fib[k]-1;i++)
+         a[i]=a[n];
+         
     while (low<=high)
     {
         mid=low+Fib[k-1]-1;

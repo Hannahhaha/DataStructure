@@ -35,7 +35,7 @@ void HeapAjust(SqList *L,int s,int m)
 {
     int temp,j;
     temp=L->r[s];
-    for(j=2*s;j<=m;i*=2)
+    for(j=2*s;j<=m;j*=2)
     {
         if(j<m&&L->r[j]<L->r[j+1])
              ++j;
